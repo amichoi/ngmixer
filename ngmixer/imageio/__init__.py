@@ -11,6 +11,7 @@ from .desmedsio import (SVDESMEDSImageIO,
                         Y3DESMEDSImageIO,
                        )
 from .simpsimmedsio import SimpSimMEDSImageIO
+from .wfirstsimmedsio import WFIRSTSimMEDSImageIO
 
 from . import extractor_corrector
 
@@ -28,6 +29,7 @@ IMAGEIO['meds-des-y3'] = Y3DESMEDSImageIO
 
 # MEDS sim formats
 IMAGEIO['meds-simp-sim'] = SimpSimMEDSImageIO
+IMAGEIO['meds_wfirst-sim'] = WFIRSTSimMEDSImageIO
 
 def get_imageio_class(imageio_name):
     """
