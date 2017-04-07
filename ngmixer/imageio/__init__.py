@@ -29,7 +29,7 @@ IMAGEIO['meds-des-y3'] = Y3DESMEDSImageIO
 
 # MEDS sim formats
 IMAGEIO['meds-simp-sim'] = SimpSimMEDSImageIO
-IMAGEIO['meds_wfirst-sim'] = WFIRSTSimMEDSImageIO
+IMAGEIO['meds-wfirst-sim'] = WFIRSTSimMEDSImageIO
 
 def get_imageio_class(imageio_name):
     """
