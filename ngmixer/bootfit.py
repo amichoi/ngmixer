@@ -1374,7 +1374,8 @@ class MaxNGMixBootFitter(NGMixBootFitter):
         self._fit_max(model,guess=guess,**kwargs)
 
         rpars=self['round_pars']
-        self.boot.set_round_s2n(fitter_type=rpars['fitter_type'])
+        #self.boot.set_round_s2n(fitter_type=rpars['fitter_type'])
+        self.boot.set_round_s2n()
 
         self.gal_fitter=self.boot.get_max_fitter()
 
