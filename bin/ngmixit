@@ -30,6 +30,9 @@ parser.add_option("--profile", action='store_true',default=False,
 parser.add_option("--make-plots", action='store_true',default=False,
                   help=("make some plots"))
 
+parser.add_option("--make-plots-nobig", action='store_true',default=False,
+                  help=("make some plots without biggles"))
+
 parser.add_option("--seed", default=None,type=int,
                   help=("random seed"))
 
@@ -112,6 +115,7 @@ if __name__ == '__main__':
                    extra_data=extra_data,
                    profile=options.profile,
                    make_plots=options.make_plots,
+                   make_plots_nobig=options.make_plots_nobig,
                    verbosity=verbosity,
                    config=config)
     else:
@@ -126,5 +130,6 @@ if __name__ == '__main__':
                 extra_data=extra_data,
                 profile=options.profile,
                 make_plots=options.make_plots,
+                make_plots_nobig=options.make_plots_nobig,
                 verbosity=verbosity,
                 config=config)
