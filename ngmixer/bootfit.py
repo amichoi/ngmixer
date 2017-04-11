@@ -869,7 +869,7 @@ class NGMixBootFitter(BaseFitter):
             if len(obs_list) == 0:
                 raise BootPSFFailure("psf fitting failed - band %d has no obs" % band)
 
-        if (self['make_plots']
+        if (self['make_plots_nobig'] # This function does not require biggles
             and (('made_psf_plots' not in self.mb_obs_list.meta) or
                  ('made_psf_plots' in self.mb_obs_list.meta and
                   self.mb_obs_list.meta['made_psf_plots'] == False)) ):
@@ -1399,7 +1399,7 @@ class ISampNGMixBootFitter(MaxNGMixBootFitter):
 
         self.gal_fitter=self.boot.get_isampler()
 
-        if self['make_plots']:
+        if self['make_plots_nobig']:  # This function does not require biggles
             self._plot_resids(self.new_mb_obs_list.meta['id'],
                               self.boot.get_max_fitter(),
                               model,
