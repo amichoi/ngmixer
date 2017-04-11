@@ -30,6 +30,7 @@ class NGMixer(dict):
                  init_only=False,
                  profile=False,
                  make_plots=False,
+                 make_plots_nobig=False,  # Shoe-horning this in temporarily
                  verbosity=0,
                  config=None):
 
@@ -41,6 +42,7 @@ class NGMixer(dict):
         self['config_file'] = config_file
         self['work_dir'] = work_dir
         self['make_plots'] = self.get('make_plots',make_plots)
+        self['make_plots_nobig'] = self.get('make_plots_nobig',make_plots_nobig)
         self['fit_coadd_galaxy'] = self.get('fit_coadd_galaxy',False)
         self['fit_me_galaxy'] = self.get('fit_me_galaxy',True)
         self['max_box_size']=self.get('max_box_size',2048)
